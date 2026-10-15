@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khushi Gupta | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body data-lens="data">
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <span class="logo-badge">KG</span>
+        <span class="logo-text">Khushi Gupta</span>
+      </div>
+      <div class="lens-switcher" role="group" aria-label="Choose which side of my work to highlight">
+        <button class="lens-btn active" data-lens-target="data">📊 Data Analyst</button>
+        <button class="lens-btn" data-lens-target="software">⚙️ Software Engineer</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="greeting">Hi, I'm Khushi Gupta</p>
+        <h1>
+          <span class="data-text">I turn million-row tables into answers people can act on.</span>
+          <span class="software-text">I build backend services and pipelines that hold up under load.</span>
+        </h1>
+        <p class="hero-desc">I do both. Pick a lens above and the page reshuffles to match what you're looking for.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">See my work</a>
+          <a href="#resumes" class="btn btn-secondary">Download resume</a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
+
+      <!-- SQL / Code Preview Box -->
+      <div class="hero-code-box">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-title">khushi_profile.sql</span>
+        </div>
+        <pre class="code-content"><code><span class="sql-keyword">SELECT</span> role, focus, impact 
+<span class="sql-keyword">FROM</span> developer_profile 
+<span class="sql-keyword">WHERE</span> graduate_year = <span class="sql-number">2026</span>
+  <span class="sql-keyword">AND</span> status = <span class="sql-string">'Ready to Relocate'</span>;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="container main-content">
+
+    <!-- About Me & Resume Downloads Section -->
+    <section class="section about-section">
+      <h2>About me</h2>
+      <div class="about-grid">
+        <div class="about-text-card">
+          <p>I'm a Computer Science graduate from DIT University (class of 2026) who likes the part of software where messy data becomes something people can trust. My projects range from a PySpark pipeline that loads over a million sales records, to a Power BI dashboard that shows leadership 12 KPIs at a glance, to a FastAPI login service built with security in mind.</p>
+          <p>I also presented my anti-spoofing face-recognition research at ICCEE 2026 at NIT Uttarakhand. Next, I'm looking for an entry-level Data Analyst, Junior Data Engineer or Software Engineer role where I can keep learning on real data and real systems. I can relocate right away to Bangalore, Hyderabad or Pune.</p>
+        </div>
+        
+        <!-- Resume Download Card -->
+        <div class="resume-download-card" id="resumes">
+          <h3>Download my resume</h3>
+          <p>Pick the version that fits the role.</p>
+          <a class="resume-link" href="./resumes/Khushi_Gupta_DataAnalyst_Resume.pdf" target="_blank" download="Khushi_Gupta_DataAnalyst_Resume.pdf">
+            <span class="resume-title">Data Analyst resume</span>
+            <small>BI, SQL and data engineering (PDF)</small>
+          </a>
+          <a class="resume-link" href="./resumes/Khushi_Gupta_SoftwareEngineer_Resume.pdf" target="_blank" download="Khushi_Gupta_SoftwareEngineer_Resume.pdf">
+            <span class="resume-title">Software Engineer resume</span>
+            <small>Backend, APIs and research (PDF)</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="work" class="section">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card" data-category="data">
+          <div class="project-tag">Data Engineering</div>
+          <h3>Distributed Retail ETL Pipeline</h3>
+          <p class="project-meta">PySpark, PostgreSQL, Python, SQL (2025)</p>
+          <ul>
+            <li>Built an automated batch pipeline that cleans, normalises and loads <strong>1,000,000+</strong> sales records into PostgreSQL.</li>
+            <li>Wrote window-function, CTE and indexed-JOIN queries that cut analytical query time by <strong>30%</strong>.</li>
+            <li>Designed star and snowflake schemas with PK/FK constraints so multi-region data stays consistent.</li>
+          </ul>
+        </article>
+
+        <article class="project-card" data-category="data">
+          <div class="project-tag">Business Intelligence</div>
+          <h3>Executive Sales KPI Dashboard</h3>
+          <p class="project-meta">Power BI, DAX, PostgreSQL, Excel (2025)</p>
+          <ul>
+            <li>Tracks <strong>12 KPIs</strong>: revenue trends, customer retention and regional margins.</li>
+            <li>Custom DAX measures for YoY growth, rolling averages and moving totals.</li>
+            <li>Connected live to PostgreSQL so weekly reporting refreshes itself.</li>
+          </ul>
+        </article>
+
+        <article class="project-card" data-category="software">
+          <div class="project-tag">Backend & APIs</div>
+          <h3>Secure Authentication Microservice</h3>
+          <p class="project-meta">Python, FastAPI, SQLite, SMTP (2024)</p>
+          <ul>
+            <li>REST backend with registration, salted bcrypt hashing and token-based sessions.</li>
+            <li>OTP by email with a 3-attempt cap and 5-minute expiry to block brute force.</li>
+            <li>Endpoints documented and tested in Postman with payload validation and clear errors.</li>
+          </ul>
+        </article>
+
+        <article class="project-card" data-category="software">
+          <div class="project-tag">AI & Research • Published, ICCEE 2026</div>
+          <h3>AI Biometric Authentication with Liveness Detection</h3>
+          <p class="project-meta">Python, TensorFlow, OpenCV, ResNet50 (2026)</p>
+          <ul>
+            <li>Anti-spoofing face recognition using ResNet50 transfer learning: <strong>96% accuracy</strong> on print and video-replay attacks.</li>
+            <li>Optimised preprocessing and inference to stay under <strong>200 ms</strong> on a consumer CPU.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section">
+      <h2>Experience</h2>
+      <div class="experience-grid">
+        <div class="exp-card">
+          <h3>Salesforce Developer Intern, AgentBlazer Program</h3>
+          <p class="exp-date">2025</p>
+          <ul>
+            <li>Wrote SOQL queries to extract and filter records across related Salesforce objects.</li>
+            <li>Automated business logic and validation with Apex triggers, blocking duplicate and corrupt records.</li>
+            <li>Found and fixed <strong>15 data-related bugs</strong> during integration testing.</li>
+          </ul>
+        </div>
+        <div class="exp-card">
+          <h3>Cybersecurity Intern, Acmegrade</h3>
+          <p class="exp-date">Jul to Aug 2024</p>
+          <ul>
+            <li>Parsed <strong>1,000+</strong> security log events in SIEM tools to spot unusual connection patterns.</li>
+            <li>Filtered out high-frequency false positives so real access issues stood out.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toolkit Section -->
+    <section class="section">
+      <h2>Toolkit</h2>
+      <div class="toolkit-grid">
+        <div class="toolkit-card"><h3>Languages</h3><p>SQL, Python, PySpark, Java, C++, Bash</p></div>
+        <div class="toolkit-card"><h3>Data & BI</h3><p>Power BI (DAX), Tableau, Excel, Pandas, NumPy, ETL</p></div>
+        <div class="toolkit-card"><h3>Databases</h3><p>PostgreSQL, MySQL, SQLite, Schema design, Tuning</p></div>
+        <div class="toolkit-card"><h3>Backend & ML</h3><p>FastAPI, Flask, REST APIs, TensorFlow, OpenCV</p></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <h2>Let's work together</h2>
+      <p>Open to Data Analyst, Junior Data Engineer and Software Engineer roles. Ready to relocate to Bangalore, Hyderabad or Pune.</p>
+      <div class="contact-actions">
+        <a href="mailto:khushiiiigupta23@gmail.com" class="btn btn-primary">Email me</a>
+        <a href="https://www.linkedin.com/in/khushi-gupta-487995260/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+        <a href="https://github.com/Khushiguptaaaaa" target="_blank" class="btn btn-outline">GitHub</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Khushi Gupta • Built with GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    // Lens Switcher Logic
+    const body = document.body;
+    const lensButtons = document.querySelectorAll('.lens-btn');
+
+    lensButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        lensButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const targetLens = btn.getAttribute('data-lens-target');
+        body.setAttribute('data-lens', targetLens);
+      });
+    });
+  </script>
+</body>
+</html>
